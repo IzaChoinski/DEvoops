@@ -1,6 +1,5 @@
 """Módulo para verificar se um número é par ou ímpar."""
 
-
 def verificar_par_ou_impar():
     """Solicita um número ao usuário e informa se é par ou ímpar."""
     numero = input("Digite um número: ")
@@ -17,5 +16,3 @@ def verificar_par_ou_impar():
 
 if __name__ == "__main__":
     verificar_par_ou_impar()
-
-
