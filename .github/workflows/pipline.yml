@@ -29,7 +29,6 @@ jobs:
 
   deploy:
     needs: build
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
     - name: Checkout do repositório
@@ -47,11 +46,11 @@ jobs:
         
     - name: Rodar análise com pylint
       run: |
-        pylint seu_script.py
+        pylint main.py
         
     - name: Simular entrega (execução do script)
       run: |
         echo "Simulando entrega em produção"
-        python seu_script.py << EOF
+        python main.py << EOF
         10
         EOF
