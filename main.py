@@ -1,6 +1,4 @@
 numero = input("Digite um número: ")
-
-
 if numero.isdigit() or (numero.startswith('-') and numero[1:].isdigit()):
     numero = int(numero)
     if numero % 2 == 0:
