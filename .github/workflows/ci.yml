@@ -27,4 +27,4 @@ jobs:
 
     - name: Análise de código com pylint
       run: |
-        pylint seu_script.py
+        pylint main.py
