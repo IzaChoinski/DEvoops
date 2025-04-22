@@ -1,18 +1,14 @@
-"""Módulo para verificar se um número é par ou ímpar."""
+"""Contador automático que informa se os números são pares ou ímpares."""
 
-def verificar_par_ou_impar():
-    """Solicita um número ao usuário e informa se é par ou ímpar."""
-    numero = input("Digite um número: ")
+import time
 
-    if numero.isdigit() or (numero.startswith('-') and numero[1:].isdigit()):
-        numero = int(numero)
+def verificar_par_ou_impar(limite=10, intervalo=1):
+    for numero in range(1, limite + 1):
         if numero % 2 == 0:
-            print(f"O número {numero} é par.")
+            print(f"{numero} é par.")
         else:
-            print(f"O número {numero} é ímpar.")
-    else:
-        print("Entrada inválida. Por favor, digite um número inteiro.")
-
+            print(f"{numero} é ímpar.")
+        time.sleep(intervalo)
 
 if __name__ == "__main__":
     verificar_par_ou_impar()
